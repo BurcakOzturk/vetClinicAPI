@@ -1,6 +1,7 @@
 package dev.patika.libraryRest.core.config;
 
 //import dev.patika.libraryRest.core.exception.NotFoundException;
+
 import dev.patika.libraryRest.core.exception.NotFoundException;
 import dev.patika.libraryRest.core.result.Result;
 import dev.patika.libraryRest.core.result.ResultData;
@@ -20,11 +21,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<Result> handleNotFoundException(NotFoundException e) {
-    return new ResponseEntity<>(ResultHelper.notFoundError(e.getMessage()), HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(ResultHelper.notFoundError(e.getMessage()), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ResultData<List<String>>> handleValidationErrors(MethodArgumentNotValidException e){
+    public ResponseEntity<ResultData<List<String>>> handleValidationErrors(MethodArgumentNotValidException e) {
 
         List<String> validationErrorList = e.getBindingResult().getFieldErrors().stream()
                 .map(FieldError::getDefaultMessage).collect(Collectors.toUnmodifiableList());

@@ -5,9 +5,9 @@ import lombok.Getter;
 
 @Getter
 public class Result {
-    private boolean status;
-    private String message;
-    private String httpCode;
+    private final boolean status;
+    private final String message;
+    private final String httpCode;
 
     public Result(boolean status, String message, String httpCode) {
         this.status = status;

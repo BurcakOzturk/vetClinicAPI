@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.patika</groupId>
-	<artifactId>libraryRest</artifactId>
+	<artifactId>vetClinic</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>libraryRest</name>
-	<description>Library REST API Project</description>
+	<name>vetClinic</name>
+	<description>Veterinary Clinic REST Api Project</description>
 	<properties>
 		<java.version>21</java.version>
 	</properties>
@@ -56,6 +56,13 @@
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
 			<version>3.2.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.2.0</version>
 		</dependency>
 
 	</dependencies>
